@@ -1,22 +1,46 @@
-import logo from './logo.svg';
+import * as React from 'react';
+
+import Avatars from './component/CandidateList';
+import Spinner from './component/Spinner';
+import Candidates from './candidates.json';
+import Button from '@mui/material/Button';
+
 import './App.css';
 
+
+
 function App() {
+  const [candidate, setCandidate] = React.useState(null); 
+
+  let interval = 100; //in millisec
+
+  function selectCandidate(times) {
+    let min = 0, max = Candidates.length - 1;
+    let num = Math.floor(Math.random() * (max - min + 1) + min);
+    setCandidate(Candidates[num]);
+
+    if (times < 20) {
+      setTimeout(selectCandidate, interval, times + 1);
+    }
+  }
+  
+  function handleClick(e) {
+    e.preventDefault();
+  
+    setTimeout(selectCandidate, interval, 0);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <p><Spinner candidate={candidate} /></p>
+        <Avatars candidates={Candidates} />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/candidates.json</code> and reload
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button variant="contained" color="success" onClick={handleClick}>
+          <b>Roll it up!</b>
+        </Button>
       </header>
     </div>
   );
