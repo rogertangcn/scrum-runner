@@ -7,19 +7,17 @@ import Button from '@mui/material/Button';
 
 import './App.css';
 
-
-
 function App() {
   const [candidate, setCandidate] = React.useState(null); 
 
-  let interval = 100; //in millisec
+  const interval = 100; //in millisec
 
   function selectCandidate(times) {
     let min = 0, max = Candidates.length - 1;
     let num = Math.floor(Math.random() * (max - min + 1) + min);
     setCandidate(Candidates[num]);
 
-    if (times < 20) {
+    if (times < 40) {
       setTimeout(selectCandidate, interval, times + 1);
     }
   }
@@ -27,6 +25,8 @@ function App() {
   function handleClick(e) {
     e.preventDefault();
   
+    setCandidate(null);
+    
     setTimeout(selectCandidate, interval, 0);
   }
 
@@ -39,7 +39,7 @@ function App() {
           Edit <code>src/candidates.json</code> and reload
         </p>
         <Button variant="contained" color="success" onClick={handleClick}>
-          <b>Roll it up!</b>
+          <b>Spin it up!</b>
         </Button>
       </header>
     </div>
