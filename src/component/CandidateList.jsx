@@ -1,9 +1,13 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+import {Tooltip, Avatar, Stack} from "@mui/material";
 
 export default function CandidateList(prop) {
-  let candidates = prop.candidates.map(candidate => <Avatar alt={candidate.name} src={candidate.avatar} key={candidate.name} />);
+  let candidates = prop.candidates.map(candidate =>
+      <Tooltip title={candidate.name}>
+        <Avatar alt={candidate.name} src={candidate.avatar} key={candidate.name} />
+      </Tooltip>
+  );
+
   return (
     <Stack direction="row" spacing={2}>
       { candidates }
