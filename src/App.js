@@ -12,13 +12,19 @@ function App() {
 
   const interval = 100; //in millisec
 
+  let lastNum = -1;
+
   function selectCandidate(times) {
-    let min = 0, max = Candidates.length - 1;
-    let num = Math.floor(Math.random() * (max - min + 1) + min);
+    let num = Math.floor(Math.random() * Candidates.length);
     setCandidate(Candidates[num]);
 
     if (times < 40) {
       setTimeout(selectCandidate, interval, times + 1);
+    } else if (num === lastNum) {
+      // ensure the last selected one is not selected in the next spin
+      setTimeout(selectCandidate, interval, times + 1);
+    } else {
+      lastNum = num;
     }
   }
   
