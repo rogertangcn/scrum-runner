@@ -2,7 +2,8 @@ import * as React from 'react';
 
 import Avatars from './component/CandidateList';
 import Spinner from './component/Spinner';
-import Candidates from './candidates.json';
+import Candidates from './data.json';
+
 import Button from '@mui/material/Button';
 
 import './App.css';
