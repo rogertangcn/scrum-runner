@@ -12,7 +12,7 @@ function Main() {
   // NOTE: github react app hosting doesn't support client-side. Have to use query param
   // https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing
   const search = useLocation().search;
-  let team = new URLSearchParams(search).get('team') || "access-cert";
+  let tag = new URLSearchParams(search).get('tag') || "ac";
 
   const { isLoading, error, data } = useQuery(['appData'], () =>
     fetch('data.json',{
@@ -26,9 +26,9 @@ function Main() {
   if (isLoading) return 'Loading...'
   if (error) return 'An error has occurred: ' + error.message
 
-  const teamMembers = data.filter(user => (user.team || []).includes(team));
+  const candidates = data.filter(user => (user.tags || []).includes(tag));
   return (
-    <Page candidates={teamMembers}/>
+    <Page candidates={candidates}/>
   );
 }
 

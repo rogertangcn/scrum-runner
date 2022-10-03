@@ -1,225 +1,142 @@
 [
   {
-    "id": "alexey.rytenkov",
     "name": "Alexey Rytenkov",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U028GM9FRJ6-3c88bccca78e-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "anna.simmons",
     "name": "Anna Simmons",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U0135MFQ0QN-fb681e0f227b-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "colin.wang",
     "name": "Colin Wang",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U7LQ2CJ0N-gf96f50ba42e-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "connor.rowe",
     "name": "Connor Rowe",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-UAKFUTPRP-e69c32c99daf-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "dipti.chavan",
     "name": "Dipti Chavan",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U021PR9Q85V-320342b58e4b-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "evan.brown",
     "name": "Evan Brown",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U03GLB07A3D-g87d8903e84a-512",
-    "team": [
-    ]
+    "tags": [ ]
   },
   {
-    "id": "harvey.kwok",
     "name": "Harvey Kwok",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U022V4G0NTC-4217ea4439d0-512",
-    "team": [
-      "access-cert", "access-req", "ramp"
-    ]
+    "tags": [ "ac", "ar", "ramp" ]
   },
   {
-    "id": "ishan.korde",
     "name": "Ishan Korde",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01T794BD0D-0ce5bbc8298c-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "jacky.chen",
     "name": "Jacky Chen",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U7L25L65T-17f0de931e30-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "kamyar.nadjafloo",
     "name": "Kamyar Nadjafloo",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01U733K0UC-3c2712cd6848-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "macy.abbey",
     "name": "Macy Abbey",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U025P89S7J7-cde3e0fa8812-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "mrunal.patel",
     "name": "Mrunal Patel",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-USNPRCJQL-c7fbbe9c7324-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "naini.khajanchi",
     "name": "Naini Khajanchi",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U017UBBF00Y-6fb0d7f84022-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "nikhil.sathe",
     "name": "Nikhil Sathe",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U025NGRLLCQ-9bc37a43154f-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "nischit.shetty",
     "name": "Nischit Shetty",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U0276N55DH8-a1d37022fdae-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "pradeep.gupta",
     "name": "Pradeep Gupta",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01RA2L30Q3-ec1426ee64f9-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "punit.pawar",
     "name": "Punit Pawar",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U03007BM8CC-2afd20af3b68-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "rich.loose",
     "name": "Rich Loose",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U028E9JNA93-d83d494d68b0-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "rishi.gosai",
     "name": "Rishi Gosai",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01EMS8TAB0-9f17a12f3a8e-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "roger.tang",
     "name": "Roger Tang",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U029X7P4GTC-fd9c97309c5f-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "ryan.bradley",
     "name": "Ryan Bradley",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-UAZFWMVB9-a70555f65c86-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "ryan.sullivan",
     "name": "Ryan Sullivan",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U02DMUWE60J-701920904920-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "shweta.kulkarni",
     "name": "Shweta Kulkarni",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01QV3ASCVD-1e188e0d3ac3-512",
-    "team": [
-      "access-req"
-    ]
+    "tags": [ "ar" ]
   },
   {
-    "id": "smarth.madan",
     "name": "Smarth Madan",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01CJJ4FVNG-bc85272058bb-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "sunny.little",
     "name": "Sunny Little",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U02BM07D7FZ-9dc1df97a0d4-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "tau.liang",
     "name": "Tau Liang",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U01GVK6KRH9-9fdf8563f42a-512",
-    "team": [
-      "access-cert"
-    ]
+    "tags": [ "ac" ]
   },
   {
-    "id": "unmesh.vartak",
     "name": "Unmesh Vartak",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-U7KV23K1A-ge541d2ff35e-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   },
   {
-    "id": "vijay.pitchumani",
     "name": "Vijay Pitchumani",
     "avatar": "https://ca.slack-edge.com/E017NDYFGQL-UBPMM27GW-3fabdadc4d9a-512",
-    "team": [
-      "ramp"
-    ]
+    "tags": [ "ramp" ]
   }
 ]
