@@ -37,12 +37,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "scrum-runner",
+    path: "/scrum-runner",
     element: <Main />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "scrum-runner/:team",
+    path: "/scrum-runner/:team",
     element: <Main />,
     errorElement: <ErrorPage />,
   },
