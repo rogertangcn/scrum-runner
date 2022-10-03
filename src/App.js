@@ -1,56 +1,37 @@
 import * as React from 'react';
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
 
-import Avatars from './component/CandidateList';
-import Spinner from './component/Spinner';
-import Candidates from './data.json';
-
-import Button from '@mui/material/Button';
+import Page from './component/Page';
 
 import './App.css';
 
-function App() {
-  const [candidate, setCandidate] = React.useState(null); 
+const queryClient = new QueryClient();
 
-  const interval = 100; //in millisec
+function Main() {
+  const { isLoading, error, data } = useQuery(['appData'], () =>
+    fetch('data.json',{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then(res => res.json())
+  )
 
-  let lastNum = -1;
+  if (isLoading) return 'Loading...'
 
-  function selectCandidate(times) {
-    let num = Math.floor(Math.random() * Candidates.length);
-    setCandidate(Candidates[num]);
+  if (error) return 'An error has occurred: ' + error.message
 
-    if (times < 40) {
-      setTimeout(selectCandidate, interval, times + 1);
-    } else if (num === lastNum) {
-      // ensure the last selected one is not selected in the next spin
-      setTimeout(selectCandidate, interval, times + 1);
-    } else {
-      lastNum = num;
-    }
-  }
-  
-  function handleClick(e) {
-    e.preventDefault();
-  
-    setCandidate(null);
-    
-    setTimeout(selectCandidate, interval, 0);
-  }
+  const teamMembers = data.filter(user => (user.team || []).includes("access-cert"));
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p><Spinner candidate={candidate} /></p>
-        <Avatars candidates={Candidates} />
-        <p>
-          Edit <code>src/candidates.json</code> and reload
-        </p>
-        <Button variant="contained" color="success" onClick={handleClick}>
-          <b>Spin it up!</b>
-        </Button>
-      </header>
-    </div>
+    <Page candidates={teamMembers}/>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Main />
+    </QueryClientProvider>
+  );
+}
