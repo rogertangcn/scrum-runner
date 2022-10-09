@@ -2,11 +2,12 @@ import * as React from 'react';
 
 import Avatars from './CandidateList';
 import Spinner from './Spinner';
+import { useTeam } from './TeamProvider';
 
 import Button from '@mui/material/Button';
 
 export default function Page(props) {
-  const Candidates = props.candidates;
+  const Candidates = useTeam();
   const [candidate, setCandidate] = React.useState(null);
 
   const interval = 100; //in millisec

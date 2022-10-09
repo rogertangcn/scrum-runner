@@ -1,56 +1,26 @@
 import * as React from 'react';
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query';
-import { createBrowserRouter, RouterProvider, useLocation } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import Page from './component/Page';
-import ErrorPage from './component/ErrorPage';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { TeamProvider } from './component/TeamProvider';
+import { GoogleTokenProvider } from './component/GoogleTokenProvider';
 import './App.css';
 
 const queryClient = new QueryClient();
 
-function Main() {
-  // NOTE: github react app hosting doesn't support client-side. Have to use query param
-  // https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing
-  const search = useLocation().search;
-  let tag = new URLSearchParams(search).get('tag') || "ac";
-
-  const { isLoading, error, data } = useQuery(['appData'], () =>
-    fetch('data.json',{
-      headers : {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }).then(res => res.json())
-  )
-
-  if (isLoading) return 'Loading...'
-  if (error) return 'An error has occurred: ' + error.message
-
-  const candidates = data.filter(user => (user.tags || []).includes(tag));
-  return (
-    <Page candidates={candidates}/>
-  );
-}
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/scrum-runner",
-    element: <Main />,
-    errorElement: <ErrorPage />,
-  }
-]);
+const GAPI_CLIENT_ID = "394003123742-2chg6ap79srfciv8pb6cc17lks5uiebd.apps.googleusercontent.com";
 
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
-    </QueryClientProvider>
+    <GoogleOAuthProvider clientId={GAPI_CLIENT_ID}>
+      <GoogleTokenProvider>
+        <QueryClientProvider client={queryClient}>
+          <TeamProvider >
+            <Page />
+          </TeamProvider>
+        </QueryClientProvider>
+      </GoogleTokenProvider>
+    </GoogleOAuthProvider>
   );
 }
