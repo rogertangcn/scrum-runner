@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import * as React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import Page from './component/Page';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { TeamProvider } from './component/TeamProvider';
+import { GoogleTokenProvider } from './component/GoogleTokenProvider';
 import './App.css';
 
-function App() {
+const queryClient = new QueryClient();
+
+const GAPI_CLIENT_ID = "394003123742-2chg6ap79srfciv8pb6cc17lks5uiebd.apps.googleusercontent.com";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoogleOAuthProvider clientId={GAPI_CLIENT_ID}>
+      <GoogleTokenProvider>
+        <QueryClientProvider client={queryClient}>
+          <TeamProvider >
+            <Page />
+          </TeamProvider>
+        </QueryClientProvider>
+      </GoogleTokenProvider>
+    </GoogleOAuthProvider>
   );
 }
-
-export default App;
