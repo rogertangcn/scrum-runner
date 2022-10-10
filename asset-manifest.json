@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/scrum-runner/static/css/main.073c9b0a.css",
-    "main.js": "/scrum-runner/static/js/main.a5d0b43b.js",
+    "main.js": "/scrum-runner/static/js/main.33df9e67.js",
     "static/media/spin.png": "/scrum-runner/static/media/spin.f685215a4eaee715fb25.png",
     "index.html": "/scrum-runner/index.html",
     "main.073c9b0a.css.map": "/scrum-runner/static/css/main.073c9b0a.css.map",
-    "main.a5d0b43b.js.map": "/scrum-runner/static/js/main.a5d0b43b.js.map"
+    "main.33df9e67.js.map": "/scrum-runner/static/js/main.33df9e67.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a5d0b43b.js"
+    "static/js/main.33df9e67.js"
   ]
 }
