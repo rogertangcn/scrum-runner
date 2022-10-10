@@ -24,7 +24,7 @@ export function GoogleTokenProvider({ children }) {
       setTokenResponse(null);
       console.log(errorResponse);
     },
-    scope: 'https://www.googleapis.com/auth/drive.readonly'
+    scope: 'https://www.googleapis.com/auth/drive.file'
   });
 
   if (!tokenResponse) {
